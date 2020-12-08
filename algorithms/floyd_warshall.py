@@ -1,5 +1,5 @@
 from collections import defaultdict
-import dijkstra_shortest_path
+import bellman_ford
 import math
 
 def floyd_warshall(G):
@@ -29,8 +29,7 @@ def floyd_warshall(G):
         
     return A[n]
 
-class Graph(dijkstra_shortest_path.Graph):
-
+class Graph(bellman_ford.Graph):
     def from_file(self, filename):
         with open(filename, 'r') as f:
             n, m = f.readline().strip().split()

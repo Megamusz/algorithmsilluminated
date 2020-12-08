@@ -121,21 +121,11 @@ if __name__ == '__main__':
     # g.add_edge('e', 'd')
 
     g = Graph(directed = True)
-    g.from_file('tests/problem8.10.txt')
 
-    # g.add_edge('s', 'v')
-    # g.add_edge('s', 'w')
-    # g.add_edge('v', 't')
-    # g.add_edge('w', 't')
-
-    # print(g)
-    # print(g.reverse())
-    g.kosaraju_scc()
-
-    # g.BFS('s')
-    # g.DFS('s')
-    # g.topolocial_sort()
-    # print(g._fs)
+    g.add_edge('s', 'v')
+    g.add_edge('s', 'w')
+    g.add_edge('v', 't')
+    g.add_edge('w', 't')
 
     G = nx.DiGraph(g._graph)
 

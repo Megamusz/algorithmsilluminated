@@ -19,16 +19,16 @@ class TestDijkstra(unittest.TestCase):
         g = bellman_ford.Graph(directed = True)
         g.from_file('tests/problem9.8test.txt')
         s = 1
-        A, B = bellman_ford.bellman_ford(g, s)
+        _, B = bellman_ford.bellman_ford(g, s)
     
         #reconstruct the path from bellmanford algorithm and compare to the one derived from dijkstra
-        path1 = {1: [1]}
+        path1 = {s: [s]}
         for v in range(1, len(g._graph) + 1):
             if v == s:
                 continue
             w = v
             path1[v] = [v]
-            while B[w-1] != 1:
+            while B[w-1] != s:
                 w = B[w-1]
                 path1[v].insert(0, w)
             path1[v].insert(0, s)
