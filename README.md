@@ -164,9 +164,18 @@ Code: [randomized_selection.py](algorithms/randomized_selection.py)
 ## Single Source Shortest Path (SSSP) 
 
 ### Dijkstra 
+Running time **O(mlog(n))** (with Heap data structure)  
 
+Pseudo code  
+![Dijkstra](figs/dijkstra.png)
+
+Code: [dijkstra_shortest_path.py](algorithms/dijkstra_shortest_path.py)
 ### Bellman-Ford 
+Running time **O(mn)**
 
+![Bellman-Ford](figs/bellman_ford.png)
+
+Code: [bellman_ford.py](algorithms/bellman_ford.py)
 ## All Pair Shortest Path (APSP)
 
 ### Floyd-Warshall 
